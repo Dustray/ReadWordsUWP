@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="ReadWordsUWP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ReadWordsUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Image HorizontalAlignment="Center" Margin="0,15,0,0" VerticalAlignment="Top" Source="Assets/xijinping.jpg" Height="200"/>
+        <Button Name="readMeBtn" Width="100" Height="49" Content="阅读" Margin="20" HorizontalAlignment="Right" VerticalAlignment="Top" Click="readMeBtn_Click" />
+        <TextBox Name="readMeText" Margin="0,225,0,0" PlaceholderText="请输入文本：" AcceptsReturn="True" TextWrapping="Wrap"/>
+        <MediaElement Name="mediaelement" HorizontalAlignment="Left" Height="100" Margin="600,774,0,-154" VerticalAlignment="Top" Width="100"/>
+        
+    <StackPanel Margin="0,80,0,0">
+        <Slider HorizontalAlignment="Right" Margin="0,0,10,0" VerticalAlignment="Top" Width="300" Maximum="1400" SmallChange="10" TickFrequency="100" TickPlacement="Outside" Value="100" LargeChange="100"/>
+    </StackPanel>
+
+    </Grid>
+    
+</Page>
