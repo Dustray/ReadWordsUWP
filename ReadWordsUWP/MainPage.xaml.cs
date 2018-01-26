@@ -30,25 +30,28 @@ namespace ReadWordsUWP
 
         private void readMeBtn_Click(object sender, RoutedEventArgs e)
         {
-            
+
             speech();
         }
         private async void speech()
         {
-            string str= "孙学刚，起床了。";
-            if (readMeText.Text!="")
-                str= readMeText.Text;
+            string str = "啊啊啊";
+            string speechSpeed = speedSlider.Value + "0%";
+            string speechPeople = "male";
+            if ((bool)femaleSpeech.IsChecked) speechPeople = "female";
+            if (readMeText.Text != "")
+                str = readMeText.Text;
             string Ssml =
                 @"<speak version='1.0' " +
                 "xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='zh-CN'>" +
-                "<voice gender ='male'>"+
-                "<prosody rate = '-30%' contour='(60%,+800Hz) (70%,+80%) (80%,+800Hz)'>"+
+                "<voice gender ='" + speechPeople + "'>" +
+                "<prosody rate = '" + speechSpeed + "' contour='(60%,+800Hz) (70%,+80%) (80%,+800Hz)'>" +
                 str +
                 "</prosody> " +
                 "<break time='0ms'/>" +
                 "</voice>" +
                 "</speak>";
-            
+
             MediaElement mediaElement = this.mediaelement;
 
             // The object for controlling the speech synthesis engine (voice).

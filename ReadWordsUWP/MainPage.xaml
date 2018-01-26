@@ -12,11 +12,13 @@
         <Button Name="readMeBtn" Width="100" Height="49" Content="阅读" Margin="20" HorizontalAlignment="Right" VerticalAlignment="Top" Click="readMeBtn_Click" />
         <TextBox Name="readMeText" Margin="0,225,0,0" PlaceholderText="请输入文本：" AcceptsReturn="True" TextWrapping="Wrap"/>
         <MediaElement Name="mediaelement" HorizontalAlignment="Left" Height="100" Margin="600,774,0,-154" VerticalAlignment="Top" Width="100"/>
-        
-    <StackPanel Margin="0,80,0,0">
-        <Slider HorizontalAlignment="Right" Margin="0,0,10,0" VerticalAlignment="Top" Width="300" Maximum="1400" SmallChange="10" TickFrequency="100" TickPlacement="Outside" Value="100" LargeChange="100"/>
-    </StackPanel>
+
+        <StackPanel Margin="0,80,0,0">
+            <Slider Name="speedSlider" HorizontalAlignment="Right" Margin="0,0,10,0" VerticalAlignment="Top" Width="300" Maximum="10" SmallChange="1" TickFrequency="1" TickPlacement="Outside" LargeChange="1" Minimum="-10"/>
+            <RadioButton Name="maleSpeech" Content="男声"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsChecked="True"/>
+            <RadioButton Name="femaleSpeech" Content="女声" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        </StackPanel>
 
     </Grid>
-    
+
 </Page>
